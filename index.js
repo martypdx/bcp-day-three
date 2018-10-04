@@ -1,19 +1,13 @@
-var x = 12;
+var countTo = prompt('how high should we count even numbers?');
 
-// (condition that if true, code block runs)
-if(x % 2 === 0) {
-    console.log('is even');
-}
-// alternative condition when if is false
-else {
-    console.log('is odd');
-}
+var sure = confirm('are you sure you want to count to ' + countTo);
 
-// (init; condition; post-loop)
-for(var i = 0; i < 10; i++) {
-    var y = i * 2;
-    if(y < 10) {
-        console.log('the number doubled is', y);
+if(sure) {
+    for(var i = 0; i < countTo; i++) {
+        var remainder = i % 2;
+        if(remainder === 0) {
+            console.log(i, 'is even');
+        }
     }
 }
 
